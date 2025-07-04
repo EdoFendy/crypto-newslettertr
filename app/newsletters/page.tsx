@@ -6,6 +6,23 @@ import { getNewsletters } from "@/lib/newsletter-service"
 import { Search, Filter } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Crypto Newsletters - AI-Curated Crypto Insights",
+  description: "Stay updated with AI-curated cryptocurrency newsletters. Browse our comprehensive crypto news collection.",
+  openGraph: {
+    title: "Crypto Newsletters - Crypto Newsletter Hub",
+    description: "Stay updated with AI-curated cryptocurrency newsletters. Browse our comprehensive crypto news collection.",
+    url: "https://cryptonewsai.site/newsletters",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Crypto Newsletters - Crypto Newsletter Hub",
+    description: "Stay updated with AI-curated cryptocurrency newsletters. Browse our comprehensive crypto news collection.",
+  },
+}
 
 export default async function NewslettersPage() {
   const newsletters = await getNewsletters()
