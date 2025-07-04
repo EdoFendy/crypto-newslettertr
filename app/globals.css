@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Enhanced HTML Content Styles */
+.newsletter-content {
+  @apply max-w-none;
+}
+
+/* Custom styles for HTML elements in newsletter content */
+.newsletter-content .html-h1 {
+  @apply text-4xl font-bold text-gray-900 mb-6 mt-8 leading-tight border-b border-gray-200 pb-4;
+}
+
+.newsletter-content .html-h2 {
+  @apply text-3xl font-bold text-gray-800 mb-5 mt-7 leading-tight;
+}
+
+.newsletter-content .html-h3 {
+  @apply text-2xl font-semibold text-gray-800 mb-4 mt-6 leading-tight;
+}
+
+.newsletter-content .html-h4 {
+  @apply text-xl font-semibold text-gray-700 mb-3 mt-5 leading-tight;
+}
+
+.newsletter-content .html-h5 {
+  @apply text-lg font-semibold text-gray-700 mb-3 mt-4 leading-tight;
+}
+
+.newsletter-content .html-h6 {
+  @apply text-base font-semibold text-gray-600 mb-2 mt-3 leading-tight;
+}
+
+.newsletter-content .html-p {
+  @apply text-gray-700 mb-4 leading-relaxed text-base;
+}
+
+.newsletter-content .html-blockquote {
+  @apply border-l-4 border-blue-500 pl-6 py-4 my-6 bg-blue-50 rounded-r-lg italic text-gray-700 relative;
+}
+
+.newsletter-content .html-blockquote::before {
+  content: '"';
+  @apply text-6xl text-blue-300 absolute -top-2 -left-2 font-serif;
+}
+
+.newsletter-content .html-ul {
+  @apply list-disc list-inside mb-4 space-y-2 text-gray-700 ml-4;
+}
+
+.newsletter-content .html-ol {
+  @apply list-decimal list-inside mb-4 space-y-2 text-gray-700 ml-4;
+}
+
+.newsletter-content .html-li {
+  @apply leading-relaxed;
+}
+
+.newsletter-content .html-code {
+  @apply bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono border;
+}
+
+.newsletter-content .html-pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6 text-sm font-mono border shadow-inner;
+}
+
+.newsletter-content .html-pre .html-code {
+  @apply bg-transparent text-gray-100 px-0 py-0 border-0;
+}
+
+.newsletter-content .html-table {
+  @apply w-full border-collapse border border-gray-300 my-6 rounded-lg overflow-hidden shadow-sm;
+}
+
+.newsletter-content .html-th {
+  @apply border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800 bg-gray-50;
+}
+
+.newsletter-content .html-td {
+  @apply border border-gray-300 px-4 py-3 text-gray-700;
+}
+
+.newsletter-content .html-tr:hover {
+  @apply bg-gray-50;
+}
+
+.newsletter-content .html-link {
+  @apply text-blue-600 hover:text-blue-800 underline decoration-blue-300 hover:decoration-blue-500 transition-colors font-medium;
+}
+
+.newsletter-content .html-img {
+  @apply rounded-lg shadow-md max-w-full h-auto my-6 mx-auto block;
+}
+
+.newsletter-content .html-hr {
+  @apply border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-8;
+}
+
+.newsletter-content .html-strong,
+.newsletter-content .html-b {
+  @apply font-bold text-gray-900;
+}
+
+.newsletter-content .html-em,
+.newsletter-content .html-i {
+  @apply italic text-gray-800;
+}
+
+.newsletter-content .html-mark {
+  @apply bg-yellow-200 text-yellow-900 px-1 rounded;
+}
+
+.newsletter-content .html-del {
+  @apply line-through text-red-600 bg-red-50 px-1 rounded;
+}
+
+.newsletter-content .html-ins {
+  @apply underline text-green-600 bg-green-50 px-1 rounded;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .newsletter-content .html-h1 {
+    @apply text-2xl;
+  }
+
+  .newsletter-content .html-h2 {
+    @apply text-xl;
+  }
+
+  .newsletter-content .html-h3 {
+    @apply text-lg;
+  }
+
+  .newsletter-content .html-table {
+    @apply text-sm;
+  }
+
+  .newsletter-content .html-pre {
+    @apply text-xs;
+  }
+}
+
+/* Animation classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-stagger-3 {
+  animation-delay: 0.3s;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
