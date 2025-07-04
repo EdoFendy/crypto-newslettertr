@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 import { NewsletterCard } from "@/components/newsletter-card"
 import { getNewsletters } from "@/lib/newsletter-service"
 import { Search, Filter } from "lucide-react"
